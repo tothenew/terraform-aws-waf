@@ -1,18 +1,3 @@
-# terraform-aws-waf
-
-[![Lint Status](https://github.com/tothenew/terraform-aws-waf/workflows/Lint/badge.svg)](https://github.com/tothenew/terraform-aws-waf/actions)
-[![LICENSE](https://img.shields.io/github/license/tothenew/terraform-aws-waf)](https://github.com/tothenew/terraform-aws-waf/blob/master/LICENSE)
-
-This is a template to use for baseline. The default actions will provide updates for section bitween Requirements and Outputs.
-
-The following content needed to be created and managed:
- - Introduction
-     - Explaination of module 
-     - Intended users
- - Resource created and managed by this module
- - Example Usages
-
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -21,7 +6,9 @@ The following content needed to be created and managed:
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -29,21 +16,24 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_wafv2_web_acl.WAFWebACL](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/wafv2_web_acl) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cloudwatch_metrics_enabled"></a> [cloudwatch\_metrics\_enabled](#input\_cloudwatch\_metrics\_enabled) | n/a | `bool` | `"false"` | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A map to add common tags to all the resources | `map(string)` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `" "` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"us-east-1"` | no |
+| <a name="input_sampled_requests_enabled"></a> [sampled\_requests\_enabled](#input\_sampled\_requests\_enabled) | n/a | `bool` | `"false"` | no |
+| <a name="input_scope"></a> [scope](#input\_scope) | n/a | `any` | n/a | yes |
 
 ## Outputs
 
-No outputs.
-<!-- END_TF_DOCS -->
-
-## Authors
-
-Module managed by [TO THE NEW Pvt. Ltd.](https://github.com/tothenew)
-
-## License
-
-Apache 2 Licensed. See [LICENSE](https://github.com/tothenew/terraform-aws-waf/blob/main/LICENSE) for full details.
+| Name | Description |
+|------|-------------|
+| <a name="output_aws_wafv2_web_acl"></a> [aws\_wafv2\_web\_acl](#output\_aws\_wafv2\_web\_acl) | WAF ARN |
