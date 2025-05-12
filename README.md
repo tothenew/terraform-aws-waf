@@ -15,13 +15,6 @@ Module managed by [TO THE NEW Pvt. Ltd.](https://github.com/tothenew)
 
 The module defines a WAFv2 Web ACL and conditionally attaches multiple AWS-managed rule groups. Each rule group can be toggled using Boolean input variables. It supports enabling CloudWatch metrics and sampling for observability. The module is fully taggable and integrates seamlessly with other AWS services such as ALB, API Gateway, and CloudFront.
 
-## Intended Users
-
-This module is designed for:
-- Cloud/DevOps engineers managing web-facing AWS infrastructure
-- Security engineers enforcing application-level protection
-- Developers implementing automated infrastructure via Terraform
-- Teams maintaining reusable security infrastructure modules
 
 ## Resources Created and Managed by This Module
 
