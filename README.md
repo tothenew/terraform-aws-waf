@@ -26,22 +26,6 @@ The module defines a WAFv2 Web ACL and conditionally attaches multiple AWS-manag
 ## Example Usages
 
 ```hcl
-module "waf_web_acl" {
-  source = "../modules/waf"
-
-  name                          = "my-app"
-  description                   = "Web ACL for my application"
-  scope                         = "REGIONAL"
-  project_name_prefix           = "myproject"
-  region                        = "us-east-1"
-  common_tags                   = {
-    Environment = "dev"
-    Owner       = "security-team"
-  }
-  cloudwatch_metrics_enabled    = true
-  sampled_requests_enabled      = true
-
-  is_enable_AWSManagedRulesAdminProtectionRuleSet = true
-  is_enable_AWSManagedRulesSQLiRuleSet            = true
-  is_enable_AWSManagedRulesAnonymousIpList        = true
+module "terraform-aws-waf" {
+  source = "git::https://github.com/tothenew/terraform-aws-waf"
 }
